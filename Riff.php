@@ -194,8 +194,8 @@ abstract class Riff {
     * @param string $split_delim
     * @example
     * <code>
-    * WaterReport::genRedisKeyColTagID('TAG','Description'); <br>
-    * print_r( self::Redis()->sGetMembers(RedCache::genKey('Foreground High Pressure'))); <br>
+    * Riff->genRedisKeyColTagID('TAG','Description'); <br>
+    * print_r( self::Redis()->sGetMembers($this->genKey('Foreground High Pressure'))); <br>
     * </code>
     * @return int
     */
@@ -277,7 +277,7 @@ abstract class Riff {
    }
 
    /**
-    * Search A Subkey / SubKey Value Pair to Get Elements create by RedCache::addSetIndex(...) given multiple subkey:subkey_value pairs in array format
+    * Search A Subkey / SubKey Value Pair to Get Elements create by $this->addSetIndex(...) given multiple subkey:subkey_value pairs in array format
     * @version 2014-10-21 17:06
     * @author Steven Hollingsworth <steven.hollingsworth@fresno.gov>
     * @param array $pairArray array('type:blarg','description:boop')
